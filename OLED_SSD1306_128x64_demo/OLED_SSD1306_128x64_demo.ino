@@ -2,7 +2,7 @@
  This is an example for our Monochrome OLEDs based on SSD1306 controllers
 
  Pick one up today in the adafruit shop!
- ------> http://www.adafruit.com/category/63_98
+ ------>  http://www.adafruit.com/category/63_98
 
  This example is for a 128x64 pixel display using I2C to communicate
  3 pins are required to interface (two I2C and one reset).
