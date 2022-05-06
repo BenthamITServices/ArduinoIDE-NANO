@@ -5,7 +5,7 @@
  ------>  http://www.adafruit.com/category/63_98
 
  This example is for a 128x64 pixel display using I2C to communicate
- 3 pins are required to interface (two I2C and one reset).
+ 2 pins are required to interface (SCL and SDA).
 
  Adafruit invests time and resources providing this open
  source code, please support Adafruit and open-source
