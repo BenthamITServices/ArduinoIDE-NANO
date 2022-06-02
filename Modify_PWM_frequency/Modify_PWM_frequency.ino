@@ -22,6 +22,7 @@ Serial.println(OCR2A, HEX);
 Serial.println("=========");
 }
 
+
 void loop() {
   // put your main code here, to run repeatedly:
 pot = analogRead(potPin);
