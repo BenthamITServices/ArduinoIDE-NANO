@@ -12,9 +12,9 @@ void loop() {
 
   Serial.print("\x1b[1;31m");  // Set terminal style to bold, red foreground.  See https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797
 
-  delay(1000);
+  delay(1000); //Show terminal window is blank for 1 second
   
   Serial.println("Hello");
 
-  delay(1000);
+  delay(1000); // Leave text in terminal window for 1 second
 }
