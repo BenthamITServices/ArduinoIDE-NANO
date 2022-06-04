@@ -9,11 +9,20 @@
 
 void setup() {
   Wire.begin();
+  // deactivate internal pullups for twi.
+  //digitalWrite(SDA, 0);
+  //digitalWrite(SCL, 0);
+
   Serial.begin(9600);
   Serial.println("\nI2C Scanner");
 }
 
 void loop() {
+
+  Serial.print("\x1B[1;1H\x1B[2J");  // ANSI VT100 Escape sequences to move terminal cursor to position 1,1 then clear the terminal window
+  
+  delay(1000);
+
   byte error, address;
   int nDevices;
   Serial.println("Scanning...");
