@@ -18,7 +18,7 @@ void setup() {
 
   Serial.print("\x1b[1;31m");  // Set terminal style to bold, red foreground.  See https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797
 
-  delay(2000); //Blank terminal windows showing before next printing sequence to verify changes to control registers
+  delay(1000); //Blank terminal windows showing before next printing sequence to verify changes to control registers
 
   Serial.print("TCCR2A = ");    // Print text
   Serial.println(TCCR2A, BIN);  // Print value of TCCR2A register in binary
