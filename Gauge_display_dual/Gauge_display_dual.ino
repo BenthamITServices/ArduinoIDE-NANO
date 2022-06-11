@@ -21,6 +21,14 @@
 #include <hd44780.h>                        // main hd44780 header
 #include <hd44780ioClass/hd44780_I2Cexp.h>  // i2c expander i/o class header
 
+/*-----( Declare Constants )-----*/
+// LCD geometry
+const int LCD_COLS = 16;
+const int LCD_ROWS = 2;
+
+/*-----( Declare objects )-----*/
+//hd44780_I2Cexp lcd;  // declare lcd object: auto locate & auto config expander chip, otherwise specify lcd address as below:
+ hd44780_I2Cexp lcd(0x27);
 // define custom characters - every character is 5x8 "pixels"
 byte gauge_left[8] =   {  B11111,  B10000,  B10000,  B10000,  B10000,  B10000,  B10000,  B11111};  // left part of empty gauge    [ 
 byte gauge_center[8] = {  B11111,  B00000,  B00000,  B00000,  B00000,  B00000,  B00000,  B11111};  // center part of empty gauge  _
@@ -30,15 +38,6 @@ byte gauge_fill[8] =   {  B11111,  B11111,  B11111,  B11111,  B11111,  B11111,  
 int cpu_gauge;    // value for the CPU gauge
 int gpu_gauge;    // value for the GPU gauge
 char buffer[10];  // helper buffer to store C-style strings (generated with sprintf function)
-
-/*-----( Declare Constants )-----*/
-// LCD geometry
-const int LCD_COLS = 16;
-const int LCD_ROWS = 2;
-
-/*-----( Declare objects )-----*/
-//hd44780_I2Cexp lcd;  // declare lcd object: auto locate & auto config expander chip, otherwise specify lcd address as below:
- hd44780_I2Cexp lcd(0x27);
 
 void setup()
 {
