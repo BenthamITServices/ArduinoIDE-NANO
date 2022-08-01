@@ -20,10 +20,17 @@
 // Bitwise Operators in GIFs - https://blog.wokwi.com/bitwise-operators-in-gifs/
 // Bitwise operators Arduino documentation - https://www.arduino.cc/reference/en/language/structure/bitwise-operators/bitshiftleft/
 
+// Organising your code with multiple tabs and h files = https://www.youtube.com/watch?v=PWMOb85OGY0
+
 /*-----( Import needed libraries )-----*/
-#include <Wire.h>
-#include <hd44780.h>                        // main hd44780 header
-#include <hd44780ioClass/hd44780_I2Cexp.h>  // i2c expander i/o class header
+
+// How to use includes = https://www.arduino.cc/reference/en/language/structure/further-syntax/include/
+
+#include "LCDhelper.h" //local file
+
+#include <Wire.h> // Library file
+#include <hd44780.h> // Library file, main hd44780 header
+#include <hd44780ioClass/hd44780_I2Cexp.h>  // Library file, i2c expander i/o class header
 
 /*-----( Declare Constants )-----*/
 // LCD geometry
